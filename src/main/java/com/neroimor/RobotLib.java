@@ -9,16 +9,14 @@ import java.io.IOException;
 
 public class RobotLib {
 
-    public void screenShot() throws IOException, AWTException {
+    public void screenShot(String nameScreen) throws IOException, AWTException {
         Robot robot = new Robot();
 
         Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
 
         BufferedImage screenCapture = robot.createScreenCapture(screenRect);
 
-        ImageIO.write(screenCapture, "png", new File("screenshot.png"));
-
-        System.out.println("save");
+        ImageIO.write(screenCapture, "png", new File(nameScreen+".png"));
     }
 
     public void moveMouse(int x, int y) throws AWTException {

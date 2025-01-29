@@ -1,10 +1,11 @@
 package com.neroimor;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class SpamBot {
 
-    RobotLib robotLib = new RobotLib();
+    private RobotLib robotLib = new RobotLib();
 
     public void spamLeftClick(int quantity) throws AWTException {
         for(int i =0; i < quantity; i++){
@@ -21,6 +22,12 @@ public class SpamBot {
         for(int i =0; i < quantity; i++){
             robotLib.createText(text);
             robotLib.enter();
+        }
+    }
+
+    public void spamScreenshot(String name, int quantity) throws AWTException, IOException {
+        for(int i =0; i < quantity; i++){
+            robotLib.screenShot(name+String.valueOf(i));
         }
     }
 
