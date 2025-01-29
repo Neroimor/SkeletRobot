@@ -37,11 +37,7 @@ public class RobotLib {
         robot.keyRelease(KeyEvent.VK_ALT);
     }
 
-    public void leftArrow() throws AWTException {
-        Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_LEFT);
-        robot.keyRelease(KeyEvent.VK_LEFT);
-    }
+
 
     public void enter() throws AWTException {
         Robot robot = new Robot();
@@ -58,6 +54,11 @@ public class RobotLib {
         Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_DOWN);
         robot.keyRelease(KeyEvent.VK_DOWN);
+    }
+    public void leftArrow() throws AWTException {
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_LEFT);
+        robot.keyRelease(KeyEvent.VK_LEFT);
     }
     public void rightArrow() throws AWTException {
         Robot robot = new Robot();
